@@ -45,7 +45,7 @@ public class RNSimpleAlertDialogModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void alert(final String title, final String message, final ReadableArray buttonConfig, final Callback buttonsCallback) {
-      AlertDialog.Builder builder = new AlertDialog.Builder(getCurrentActivity());
+      AlertDialog.Builder builder = new AlertDialog.Builder(getReactApplicationContext());
 
       if(title != null) builder.setTitle(title);
       if(message != null) builder.setMessage(message);
